@@ -18,4 +18,7 @@ del shoplist        # remove the shoplist
 # Read back from the storage
 f = open(shoplistfile, 'rb')
 storedlist = p.load(f)
-print (storedlist)
+
+for line in storedlist:  
+    print (''.join(map(lambda pair: pair[0]*pair[1], line)))
+#print (storedlist)
